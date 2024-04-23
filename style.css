@@ -1,0 +1,73 @@
+body {
+    overflow-x: hidden;
+}
+.blue{
+    color: rgb(0, 0, 178);
+}
+.title{
+    display: inline-block;
+    
+}
+.title>p{
+    font-size: 18px;
+}
+
+
+.img{
+    display: flex;
+    width: 500px;
+    margin: auto;
+
+}
+.parent{
+    position: relative;
+
+}
+.content{
+    border:1px rgba(108, 108, 108, 0.683) solid;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: center;
+}
+.content::after{
+    content:'';
+    height: 3px;
+    width: 100%;
+    background-color: rgb(51, 102, 204);
+    top: 0px;
+    right: 0px;
+    position: absolute;
+}
+.text{
+    padding: 20px;    
+}
+.content> h2{
+    padding-left: 20px;
+}
+.content > img{
+    padding-right: 20px;
+    float: right;
+}
+.img> img{
+    float: none;
+}
+ul{
+    float: left;
+    padding-left: 20px;
+    line-height: 20px;
+    display:grid;
+}
+.row{
+    
+    justify-content: space-between;
+    transition: all 1.3s;
+    row-gap: 30px;
+}
+.friend{
+    height: calc(4*100%/12);
+}
+@media screen and (max-width:1400px) {
+    .row{
+        justify-content: space-evenly;
+    }
+}
